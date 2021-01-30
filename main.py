@@ -31,9 +31,8 @@ def hangman():
    print (f"Le mot est composé de {len (w)} lettres")
    while guessed == False and g <= 10:      
       l = input('Veuillez entrer une lettre : ')      
-      # lettre = w.lower().find(l.lower())
       if l not in w:
-      # if lettre == -1:
+      
          if g == 1 :
                                           print(""" 
                                                       
