@@ -31,8 +31,9 @@ def hangman():
    print (f"Le mot est composé de {len (w)} lettres")
    while guessed == False and g <= 10:      
       l = input('Veuillez entrer une lettre : ')      
-      lettre = w.lower().find(l.lower())
-      if lettre == -1:
+      # lettre = w.lower().find(l.lower())
+      if l not in w:
+      # if lettre == -1:
          if g == 1 :
                                           print(""" 
                                                       
@@ -148,15 +149,15 @@ def hangman():
       else:            
             list.append(l.lower())
                # list.sort()
-            status = ''   
+            word = ''   
             if guessed == False: 
                for l in w.lower():                        
                   if l in list:                  
-                     status += l                                 
+                     word += l                                 
                   else:
-                     status +=' _'
-               print(status)
-            if status == w:
+                     word +=' _'
+               print(word)
+            if word == w:
                print (' ')
                print (f"Bravo vous avez trouver le mot {w} !")
                print (' ')
